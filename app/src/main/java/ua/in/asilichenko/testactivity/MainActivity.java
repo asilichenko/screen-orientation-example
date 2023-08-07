@@ -15,41 +15,52 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    ToastUtil.toast(this, "main:create");
-  }
-
-  @Override
-  protected void onStart() {
-    super.onStart();
-    ToastUtil.toast(this, "main:start");
-
+    System.out.println("MainActivity.onCreate()");
     if (ORIENTATION_LANDSCAPE == getResources().getConfiguration().orientation) {
       startActivity(new Intent(this, SecondActivity.class));
     }
   }
 
   @Override
+  protected void onRestart() {
+    super.onRestart();
+    System.out.println("MainActivity.onRestart()");
+  }
+
+  @Override
+  protected void onStart() {
+    super.onStart();
+    System.out.println("MainActivity.onStart()");
+  }
+
+  @Override
+  protected void onPause() {
+    super.onPause();
+    System.out.println("MainActivity.onPause()");
+  }
+
+  @Override
   protected void onResume() {
     super.onResume();
-    ToastUtil.toast(this, "main:resume");
+    System.out.println("MainActivity.onResume()");
   }
 
   @Override
   protected void onStop() {
     super.onStop();
-    ToastUtil.toast(this, "main:stop");
+    System.out.println("MainActivity.onStop()");
   }
 
   @Override
   protected void onDestroy() {
     super.onDestroy();
-    ToastUtil.toast(this, "main:destroy");
+    System.out.println("MainActivity.onDestroy()");
   }
 
   @Override
   public void onConfigurationChanged(@NonNull Configuration newConfig) {
     super.onConfigurationChanged(newConfig);
-    ToastUtil.toast(this, "main:config");
+    System.out.println("MainActivity.onConfigurationChanged()");
 
     if (ORIENTATION_LANDSCAPE == newConfig.orientation) {
       startActivity(new Intent(this, SecondActivity.class));

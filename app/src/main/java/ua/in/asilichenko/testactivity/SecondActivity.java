@@ -11,7 +11,7 @@ public class SecondActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    ToastUtil.toast(this, "second:create");
+    System.out.println("SecondActivity.onCreate()");
 
     if (ORIENTATION_PORTRAIT == getResources().getConfiguration().orientation) {
       finish();
@@ -22,26 +22,38 @@ public class SecondActivity extends AppCompatActivity {
   }
 
   @Override
+  protected void onRestart() {
+    super.onRestart();
+    System.out.println("SecondActivity.onRestart()");
+  }
+
+  @Override
   protected void onStart() {
     super.onStart();
-    ToastUtil.toast(this, "second:start");
+    System.out.println("SecondActivity.onStart()");
+  }
+
+  @Override
+  protected void onPause() {
+    super.onPause();
+    System.out.println("SecondActivity.onPause()");
   }
 
   @Override
   protected void onResume() {
     super.onResume();
-    ToastUtil.toast(this, "second:resume");
+    System.out.println("SecondActivity.onResume()");
   }
 
   @Override
   protected void onStop() {
     super.onStop();
-    ToastUtil.toast(this, "second:stop");
+    System.out.println("SecondActivity.onStop()");
   }
 
   @Override
   protected void onDestroy() {
     super.onDestroy();
-    ToastUtil.toast(this, "second:destroy");
+    System.out.println("SecondActivity.onDestroy()");
   }
 }
