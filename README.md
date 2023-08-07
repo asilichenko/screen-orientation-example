@@ -1,11 +1,11 @@
 # Adnroid: How switch between two activites by screen orientation
 
-There are two activities: `MainActivity` and `SecondActivity`.
+There are two activities: [MainActivity](app/src/main/java/ua/in/asilichenko/testactivity/MainActivity.java) and [SecondActivity](app/src/main/java/ua/in/asilichenko/testactivity/SecondActivity.java).
 
 + `MainActivity` should be displayed in the portrait orientation
 + `SecondActivity` should be displayed in the landscape orientation
 
-We need such attributes in `Manifest`:
+We need such attributes in [Manifest](app/src/main/AndroidManifest.xml):
 ```
 <activity
         android:name=".MainActivity"
