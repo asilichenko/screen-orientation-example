@@ -1,5 +1,4 @@
-# screen-orientation-example
-Android example app how switch between two activites by screen orientation.
+# Adnroid: How switch in between two activites by screen orientation
 
 There are two activities: `MainActivity` and `SecondActivity`.
 
