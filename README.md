@@ -1,4 +1,4 @@
-# Adnroid: How switch in between two activites by screen orientation
+# Adnroid: How switch between two activites by screen orientation
 
 There are two activities: `MainActivity` and `SecondActivity`.
 
